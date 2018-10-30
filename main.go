@@ -6,7 +6,7 @@ import (
 	"os/signal"
 	"time"
 
-	"github.com/zserge/rtaudio/contrib/go/rtaudio"
+	"github.com/thestk/rtaudio/contrib/go/rtaudio"
 )
 
 type eno struct {
