@@ -6,3 +6,5 @@ github.com/thestk/rtaudio v0.0.0-20181030000000-6ee55842a5b0 h1:sFAY/zFD6xF4mvGH
 github.com/thestk/rtaudio v0.0.0-20181030000000-6ee55842a5b0/go.mod h1:sXE43rmeK0QX4816+UK/qAsV+yk7WgYWlM9m2RDQL3E=
 github.com/thestk/rtmidi v0.0.0-20180914000000-cadfcf6c7dd5 h1:z0j6asfQsp4kJnX2E3XZBrPjEaL7PDaGoVzoET9cb/Q=
 github.com/thestk/rtmidi v0.0.0-20180914000000-cadfcf6c7dd5/go.mod h1:KEIAWNBKWSjBIPZWRMCBU+Uaog/YcviONZApj6ZU14M=
+github.com/zserge/webview v0.0.0-20181018084947-f390a2df9ec5 h1:1zYVGLwZR4gPRQdEiOBf9s63ZHGfCkQ/p99d1zHuZBQ=
+github.com/zserge/webview v0.0.0-20181018084947-f390a2df9ec5/go.mod h1:a1CV8KR4Dd1eP2g+mEijGOp+HKczwdKHWyx0aPHKvo4=

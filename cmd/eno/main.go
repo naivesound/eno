@@ -16,6 +16,7 @@ import (
 	"github.com/naivesound/eno/pkg/synth"
 	"github.com/thestk/rtaudio/contrib/go/rtaudio"
 	"github.com/thestk/rtmidi/contrib/go/rtmidi"
+	_ "github.com/zserge/webview"
 )
 
 func startAudio(ctx context.Context, sampleRate int, cb func([]int16)) error {
