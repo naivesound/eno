@@ -1,0 +1,5 @@
+github.com/naivesound/tsf v0.1.0 h1:YkL5s/6qLYDmuBDRIO3opm1yFm/oE+TbzpPgyQtw1pU=
+github.com/naivesound/tsf v0.1.0/go.mod h1:ZnScGKyrzsoO3eVAWtnuB/FHHjcvBPrUNKi/HFG6L1o=
+github.com/thestk/rtaudio v0.0.0-20181030000000-6ee55842a5b0 h1:sFAY/zFD6xF4mvGH8CiD3iZOCoTJa2MvVB1GzUFOJ40=
+github.com/thestk/rtaudio v0.0.0-20181030000000-6ee55842a5b0/go.mod h1:sXE43rmeK0QX4816+UK/qAsV+yk7WgYWlM9m2RDQL3E=
+github.com/zserge/rtaudio v5.0.0+incompatible h1:7fLd3jk9IP8GySJUi/h2z3X9y6rvv1tCTcDEGefG/70=
