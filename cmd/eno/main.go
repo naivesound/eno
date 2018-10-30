@@ -129,6 +129,11 @@ func main() {
 		srv.Handle("/eno/metronome/gain", OSCHandler(m.SetGain))
 		srv.Handle("/eno/metronome/bpm", OSCHandler(m.SetBPM))
 
+		srv.Handle("/eno/looper/tap", OSCHandler(looper.Tap))
+		srv.Handle("/eno/looper/cancel", OSCHandler(looper.Cancel))
+		srv.Handle("/eno/looper/gain", OSCHandler(looper.SetGain))
+		srv.Handle("/eno/looper/decay", OSCHandler(looper.SetDecay))
+
 		for port := 7027; port < 7030; port++ {
 			ln, err := net.ListenPacket("udp", fmt.Sprintf("127.0.0.1:%d", port))
 			if err != nil {
