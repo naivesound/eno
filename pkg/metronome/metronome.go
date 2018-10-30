@@ -1,4 +1,4 @@
-package main
+package metronome
 
 import (
 	"sync"
@@ -13,7 +13,7 @@ type metronome struct {
 	bpm        int
 }
 
-func NewMetronome(sampleRate int) *metronome {
+func New(sampleRate int) *metronome {
 	return &metronome{
 		sampleRate: sampleRate,
 		gain:       1,

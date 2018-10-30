@@ -1,4 +1,4 @@
-package main
+package synth
 
 import (
 	"sync"
@@ -13,7 +13,7 @@ type synth struct {
 	sampleRate int
 }
 
-func NewSynth(sampleRate int) *synth {
+func New(sampleRate int) *synth {
 	return &synth{
 		sampleRate: sampleRate,
 		gain:       1,

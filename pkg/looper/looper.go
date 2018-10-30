@@ -1,9 +1,9 @@
-package main
+package looper
 
 type looper struct {
 }
 
-func NewLooper(sampleRate int) *looper {
+func New(sampleRate int) *looper {
 	return &looper{}
 }
 

@@ -6,12 +6,11 @@ import (
 	"os/signal"
 	"time"
 
+	"github.com/naivesound/eno/pkg/looper"
+	"github.com/naivesound/eno/pkg/metronome"
+	"github.com/naivesound/eno/pkg/synth"
 	"github.com/thestk/rtaudio/contrib/go/rtaudio"
 )
-
-type eno struct {
-	m metronome
-}
 
 func startAudio(ctx context.Context, sampleRate int, cb func([]int16)) error {
 	audio, err := rtaudio.Create(rtaudio.APIUnspecified)
@@ -59,15 +58,15 @@ func main() {
 
 	sampleRate := 44100
 
-	synth := NewSynth(sampleRate)
+	synth := synth.New(sampleRate)
 	synth.Load("font.sf2")
 	synth.SetGain(0.4)
 
-	m := NewMetronome(sampleRate)
+	m := metronome.New(sampleRate)
 	m.SetBPM(120)
 	m.SetGain(0.1)
 
-	looper := NewLooper(sampleRate)
+	looper := looper.New(sampleRate)
 
 	go startAudio(ctx, sampleRate, func(out []int16) {
 		synth.MixStereo(out)

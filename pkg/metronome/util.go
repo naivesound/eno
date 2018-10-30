@@ -1,4 +1,4 @@
-package main
+package metronome
 
 func s16le(hi, lo byte) int16 {
 	sign := hi & (1 << 7)
