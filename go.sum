@@ -1,3 +1,5 @@
+github.com/hypebeast/go-osc v0.0.0-20170205175741-592fa95c06c9 h1:q45hj9cfKea4oOe4XqHrEDs4b8rsdhbahRND83GiBdk=
+github.com/hypebeast/go-osc v0.0.0-20170205175741-592fa95c06c9/go.mod h1:VCiuhv+/+jPFqHeZAgVC61Cr4drPso5XEEKmEiqCsuU=
 github.com/naivesound/tsf v0.1.0 h1:YkL5s/6qLYDmuBDRIO3opm1yFm/oE+TbzpPgyQtw1pU=
 github.com/naivesound/tsf v0.1.0/go.mod h1:ZnScGKyrzsoO3eVAWtnuB/FHHjcvBPrUNKi/HFG6L1o=
 github.com/thestk/rtaudio v0.0.0-20181030000000-6ee55842a5b0 h1:sFAY/zFD6xF4mvGH8CiD3iZOCoTJa2MvVB1GzUFOJ40=
