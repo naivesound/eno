@@ -4,6 +4,13 @@ import (
 	"sync"
 )
 
+type Metronome interface {
+	Tap()
+	SetBPM(bpm int)
+	SetGain(gain float32)
+	MixStereo(out []int16)
+}
+
 type metronome struct {
 	sync.Mutex
 	sampleRate int
@@ -13,7 +20,7 @@ type metronome struct {
 	bpm        int
 }
 
-func New(sampleRate int) *metronome {
+func New(sampleRate int) Metronome {
 	return &metronome{
 		sampleRate: sampleRate,
 		gain:       1,

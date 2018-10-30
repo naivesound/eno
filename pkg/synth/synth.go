@@ -6,6 +6,16 @@ import (
 	"github.com/naivesound/tsf"
 )
 
+type Synth interface {
+	Load(filename string)
+	SetGain(gain float32)
+	NoteOn(ch, note, vel int)
+	NoteOff(ch, note int)
+	PitchBend(ch, bend int)
+	ControlChange(ch, cc, value int)
+	MixStereo(out []int16)
+}
+
 type synth struct {
 	sync.Mutex
 	sf         *tsf.TSF
@@ -13,7 +23,7 @@ type synth struct {
 	sampleRate int
 }
 
-func New(sampleRate int) *synth {
+func New(sampleRate int) Synth {
 	return &synth{
 		sampleRate: sampleRate,
 		gain:       1,
