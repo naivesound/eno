@@ -15,6 +15,7 @@ import (
 	"github.com/naivesound/eno/pkg/metronome"
 	"github.com/naivesound/eno/pkg/synth"
 	"github.com/thestk/rtaudio/contrib/go/rtaudio"
+	"github.com/thestk/rtmidi/contrib/go/rtmidi"
 )
 
 func startAudio(ctx context.Context, sampleRate int, cb func([]int16)) error {
@@ -49,6 +50,17 @@ func startAudio(ctx context.Context, sampleRate int, cb func([]int16)) error {
 	if err := audio.Start(); err != nil {
 		return err
 	}
+	<-ctx.Done()
+	return nil
+}
+
+func startMIDI(ctx context.Context, cb func([]byte)) error {
+	midi, err := rtmidi.NewMIDIInDefault()
+	if err != nil {
+		return err
+	}
+	_, _ = midi.PortCount()
+
 	<-ctx.Done()
 	return nil
 }
@@ -97,6 +109,10 @@ func main() {
 		synth.MixStereo(out)
 		looper.MixStereo(out)
 		m.MixStereo(out)
+	})
+
+	go startMIDI(ctx, func(cmd []byte) {
+
 	})
 
 	go func() {
